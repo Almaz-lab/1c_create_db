@@ -9,7 +9,7 @@ def chdbn():
     
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect('10.100.48.93', username='root', password='', look_for_keys=True, key_filename='id_rsa.pub')
+    client.connect('10.100.48.93', username='root', password='', look_for_keys=True, key_filename='/Users/almaz/Documents/GitHub/paramiko_fastapi/1c_create_db/lk/id_rsa.pub')
 
     #Check existing bases
     stdin, stdout, stderr = client.exec_command('/opt/1cv8/x86_64/8.3.23.2040/rac infobase --cluster=f927fdde-74f4-4394-9a8f-43484ca7bd84 summary list')

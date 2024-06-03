@@ -10,11 +10,13 @@ def streamlt():
     st.write(infobaseDescriptionData)
     st.write(infobaseNameData)
 
+streamlt()
 
 
 
 if __name__ == '__main__':
-        streamlt()
+        os.system('streamlit run streamlitweb.py')
+        
 
 
 

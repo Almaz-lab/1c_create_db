@@ -10,7 +10,7 @@ def DeleteDB(infobaseUser, infobasePwd,infobaseId,infobase_name):
     
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect('10.100.48.93', username='root', password='', look_for_keys=True, key_filename='id_rsa.pub')
+    client.connect('10.100.48.93', username='root', password='', look_for_keys=True, key_filename='/opt/1cv8/x86_64/8.3.23.2040/rac infobase --cluster=f927fdde-74f4-4394-9a8f-43484ca7bd84 summary list')
 
     #delete database
     stdin, stdout, stderr = client.exec_command(f'/opt/1cv8/x86_64/8.3.23.2040/rac infobase --cluster=f927fdde-74f4-4394-9a8f-43484ca7bd84 drop --infobase-user={infobaseUser} --infobase-pwd={infobasePwd} --infobase={infobaseId}')
